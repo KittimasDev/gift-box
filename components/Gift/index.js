@@ -11,14 +11,12 @@ import Animetion8 from '@/public/anime/animetion_8.json'
 import styled, { css, keyframes } from 'styled-components'
 import { theme } from "@/styles/theme"
 
-function index() {
+export function Gift() {
 
     const [onClickPlay, setOnClickPlay] = useState(false)
     const [onReward, setOnReward] = useState(false)
     const [birthdayText, setBirthdayText] = useState(false)
     const [Delay, setDelay] = useState(false)
-
-
 
     useEffect(() => {
         if (onClickPlay == true) {
@@ -119,8 +117,6 @@ function index() {
     )
 }
 
-export default index
-
 export const Wrapper = styled.div`
     position: relative;
     max-width: 560px;
@@ -133,7 +129,7 @@ export const Birthday = styled.div`
     top: 10%;
     z-index: 99;
     transform: translate(-50%, -0%);
-    display: ${props => props.isBirthdayText ? 'block' : 'none'};
+    display: ${(props) => props.isBirthdayText ? 'block' : 'none'};
     svg
     {
         scale:2;
@@ -162,7 +158,7 @@ export const Reward = styled.div`
     left: 50%;
     transform: translate(-50%, -0%);
     animation: open 3s linear 1;
-    display: ${props => props.onReward ? 'block' : 'none'};
+    display: ${(props) => props.onReward ? 'block' : 'none'};
     @keyframes open 
     {
         0% { 
@@ -195,7 +191,7 @@ export const Reward = styled.div`
 
     [data-reward='flower-5']
     {
-        display: ${props => props.onReward ? 'block' : 'none'};
+        display: ${(props) => props.onReward ? 'block' : 'none'};
         position:absolute;
         bottom:0;
         right: 0;
@@ -207,7 +203,7 @@ export const WrapperGift = styled.div`
     justify-content: flex-end;
     height: calc(100vh - 63px);
     overflow: hidden;
-    animation: ${props => props.onClickPlay == false && `shake 0.4s linear infinite`};
+    animation: ${(props) => props.onClickPlay == false && `shake 0.4s linear infinite`};
     position:relative;
 
     @media(min-width: ${({ theme }) => theme.xs}) {
