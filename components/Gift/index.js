@@ -240,43 +240,43 @@ import styled, { css, keyframes } from 'styled-components'
 function Gift() {
     return (
         <Wrapper>
-            <div className='topic'>
-                <div>หัวข้อ</div>
-                <div>หัวข้อ1</div>
-                <div>หัวข้อ2</div>
+            <div className='topic '>
+                <div className='content'>ยี่ห้อรถของ บอ เอ สอ เบส</div>
+                <div className='content'>รุ่น</div>
+                <div className='content'>ตำแหน่งล้อ</div>
             </div>
             <div className='detail'>
                 <div className='group-item'>
                     <div className='group-item-1'>
-                        <div>
+                        <div className='content'>
                             เนื้อหา 1
                         </div>
-                        <div>
+                        <div className='content'>
                             เนื้อหา 1
                         </div>
-                        <div>
+                        <div className='content'>
                             เนื้อหา 1
                         </div>
                     </div>
                     <div className='group-item-2'>
-                        <div>
+                        <div className='content'>
                             เนื้อหา
                         </div>
-                        <div>
+                        <div className='content'>
                             เนื้อหา 2
                         </div>
-                        <div>
+                        <div className='content'>
                             เนื้อหา 2
                         </div>
                     </div>
                     <div className='group-item-3'>
-                        <div>
+                        <div className='content'>
                             เนื้อหา
                         </div>
-                        <div>
+                        <div className='content'>
                             เนื้อหา 3
                         </div>
-                        <div>
+                        <div className='content'>
                             เนื้อหา 3
                         </div>
                     </div>
@@ -297,12 +297,14 @@ export const Wrapper = styled.div`
     {   
         background-color: #717de4;
         width: 30%;
+        min-height: 50px;
     }
     .detail
     {   
         display: flex;
         width: 70%;
         overflow: scroll;
+        min-height: 50px;
     }
     .group-item
     {
@@ -311,13 +313,24 @@ export const Wrapper = styled.div`
     .group-item-1
     {
         width: 180px;
+        min-height: 50px;
     }
     .group-item-2
     {
         width: 180px;
+        min-height: 50px;
     }
     .group-item-3
     {
         width: 180px;
+        min-height: 50px;
+    }
+    .content
+    {
+        min-height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid white;
     }
 `
