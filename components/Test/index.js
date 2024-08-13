@@ -66,8 +66,8 @@ function Test() {
 
     const addOnMenu = (item) => {
 
-        const eiei = userMenu
-        const array1 = [...eiei, item]
+        const defalut = userMenu
+        const array1 = [...defalut, item]
 
         const _unique = array1.filter(
             (value, index) =>
@@ -125,12 +125,9 @@ function Test() {
 
         if (isPink?.quantity > 1 || isOrange?.quantity > 1 || isGreen?.quantity > 1) {
             setPromotion(true)
-            console.log('if')
         }
         else {
             setPromotion(false)
-            console.log('else')
-
         }
     }, [userMenu])
 
