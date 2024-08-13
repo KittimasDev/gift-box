@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { functions, get } from 'lodash'
 import styled, { css, keyframes } from 'styled-components'
 
-function index() {
+function Test() {
     const [member, setMember] = useState(false)
     const [userMenu, setUserMenu] = useState([])
     const [amountTotal, setAmountTotal] = useState(0)
@@ -154,7 +154,7 @@ function index() {
                     {
                         userMenu?.map(item => {
                             return (
-                                <div data-menu="menu-item">
+                                <div key={`menu-${i}`} data-menu="menu-item">
                                     <div data-menu="menu-item-1">{item.title}</div>
                                     <div data-menu="menu-item-2">{item.quantity}</div>
                                     <div data-menu="menu-item-3">{item.price}</div>
@@ -268,4 +268,4 @@ export const Wrapper = styled.div`
     }
 `
 
-export default index
+export default Test
