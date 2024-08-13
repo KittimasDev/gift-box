@@ -1,10 +1,8 @@
 'use client'
-import Image from "next/image";
-import styles from "./page.module.css";
-import { Gift } from "@/components/Gift";
+import Test  from "@/components/Test";
 
 export default function Home() {
   return (
-    <Gift />
+    <Test />
   );
 }
