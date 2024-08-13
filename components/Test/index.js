@@ -152,7 +152,7 @@ function Test() {
                 <div>Your Menu</div>
                 <div data-menu="item-menu-discount">
                     {
-                        userMenu?.map(item => {
+                        userMenu?.map((item, i) => {
                             return (
                                 <div key={`menu-${i}`} data-menu="menu-item">
                                     <div data-menu="menu-item-1">{item.title}</div>
